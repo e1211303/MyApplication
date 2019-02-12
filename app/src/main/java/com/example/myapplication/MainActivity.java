@@ -6,8 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.security.Key;
-
 public class MainActivity extends AppCompatActivity
     implements Button.OnClickListener   //リスナーのインターフェース（onClick）を実装することを宣言
 {
