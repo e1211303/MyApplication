@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="greeting">こんにちは</string>
+
+    <!--カウンタ用の文字列-->
+    <string name="label">カウント数：</string>
+    <string name="init_value">0</string>
+    <string name="plus">＋</string>
+    <string name="reset">リセット</string>
+
 </resources>
