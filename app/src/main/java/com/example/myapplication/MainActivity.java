@@ -14,5 +14,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
 
-    
+    @Override
+    public void onClick(View v) {
+        //ここに実際の処理を記述する
+    }
 }
