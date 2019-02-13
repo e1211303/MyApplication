@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity
     //カウント数を記憶
     private int m_count = 0;
 
+    //Bundle用のキー（文字列定数）
+    private final String KEY_m_count = "m_count";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +23,26 @@ public class MainActivity extends AppCompatActivity
 
         //ボタンにリスナを設定する処理
         setOnClickListeners();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        //保存したm_countの値を復元
+        m_count = savedInstanceState.getInt(KEY_m_count);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateCountDisplay();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //m_countの値を保存
+        outState.putInt(KEY_m_count,m_count);
     }
 
     //配置済みのボタンにリスナを設定する
